@@ -1,0 +1,11 @@
+flask
+gunicorn
+python-dotenv
+langchain-google-genai
+langchain-core
+langchain-text-splitters
+langchain-huggingface
+langchain-community
+faiss-cpu
+sentence-transformers
+youtube-transcript-api

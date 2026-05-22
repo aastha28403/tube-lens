@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tube-lens
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn youtube_chatbot:app --bind 0.0.0.0:$PORT --timeout 120 --workers 1
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false          # you'll paste this in Render dashboard
+      - key: SECRET_KEY
+        generateValue: true  # Render auto-generates a stable secret
